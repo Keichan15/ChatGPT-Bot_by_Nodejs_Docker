@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    command: node bot/index.js
+    ports:             #-p ポートフォワーディング
+      - 3000:3000
+    tty: true          #-t ttyを割り当てます。
